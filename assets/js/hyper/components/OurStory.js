@@ -9,15 +9,16 @@ export default function OurStory({ state, actions }) {
 						<h5 class="comp-title">Our Story</h5>
 						<h2 class="">Cooking is the Art of Adjustment</h2>
 						<p>
-							I'm baby 3 wolf moon bushwick photo booth, cliche synth meh air
-							plant flannel mixtape selvage. Four dollar toast letterpress
-							intelligentsia literally microdosing, yr pour-over viral waistcoat
-							post-ironic PBR&B gastropub drinking vinegar. 90's scenester XOXO
-							disrupt plaid four dollar toast man braid. Pitchfork pinterest
-							kale chips synth.
+							In 2018 we decided to open our doors after spending 12 years in
+							Venice. Upon returning to Canada we knew that we wanted to bring
+							the authentic taste of Italy home with us.<br></br> We at Libre
+							Pizza Plaza pride ourselves in using high-quality ingredients
+							prepared by our expertly trained chefs. Our chefs specialise in
+							local and regional Italian tastes and techniques, so you will
+							always enjoy a truly authentic Italian dining experience.
 						</p>
 						<div class="quote">
-							"The best pie this neighbourhood has to offer" -
+							"The best pie this neighbourhood has to offer" <br></br>-
 							<strong>Tom Huntington</strong>
 						</div>
 						<a href="#" class="reserve-btn">

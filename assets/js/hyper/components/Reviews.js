@@ -1,6 +1,25 @@
 import { h, app } from 'hyperapp';
 
 export default function Reviews({ state, actions }) {
+	var currentReview = function() {
+		console.log();
+		return (
+			<div>
+				<h5 class="comp-title"> Reviews </h5>
+				<h2>{state.reviewsData[state.reviewStatus.currentReview].company}</h2>
+				<h4>
+					"{state.reviewsData[state.reviewStatus.currentReview].highlight}"
+				</h4>
+				<p>{state.reviewsData[state.reviewStatus.currentReview].review}</p>
+				<div class="author">
+					<strong>
+						{state.reviewsData[state.reviewStatus.currentReview].author}{' '}
+					</strong>{' '}
+					- {state.reviewsData[state.reviewStatus.currentReview].authorInfo}
+				</div>
+			</div>
+		);
+	};
 	return (
 		<section id="Reviews">
 			<div class="container">
@@ -11,23 +30,21 @@ export default function Reviews({ state, actions }) {
 						</div>
 					</div>
 					<div class="col-md-4">
-						<h5 class="comp-title"> Reviews </h5>
-						<h2>The Food Master's</h2>
-						<h4>"Best pizza in the city!"</h4>
-						<p>
-							I'm baby 3 wolf moon bushwick photo booth, cliche synth meh air
-							plant flannel mixtape selvage. Four dollar toast letterpress
-							intelligentsia literally microdosing, yr pour-over viral waistcoat
-							post-ironic PBR&B gastropub drinking vinegar. 90's scenester XOXO
-							disrupt plaid four dollar toast man braid. Pitchfork pinterest
-							kale chips synth.
-						</p>
-						<div class="author">
-							<strong>Joe Bastachi </strong> - Winner of Master Chef
-						</div>
+						{currentReview()}
 						<div class="arrows">
-							<i class="fas ready fa-arrow-left "></i>
-							<i class="fas fa-arrow-right"></i>
+							<i
+								class={`fas fa-arrow-left ${
+									state.reviewStatus.currentReview > 0 ? 'ready' : ''
+								}`}
+							></i>
+							<i
+								class={`fas ${
+									state.reviewStatus.currentReview ==
+									state.reviewsData.length - 1
+										? ''
+										: 'ready'
+								} fa-arrow-right`}
+							></i>
 						</div>
 					</div>
 				</div>

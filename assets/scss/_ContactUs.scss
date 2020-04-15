@@ -1,3 +1,59 @@
 #ContactUs {
+    background-image:
+    url('https://image.freepik.com/free-photo/watercolor-splash-background_23-2148175602.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
 
+    h2, h5 {
+    text-align: center;
+    color: $black;
+    }
+    .box {
+        margin: 0 auto;
+        padding: 70px;
+        background : white;
+        width: 80%;
+        .left-side{
+            margin-top: 80px;
+        }
+        .title{
+            // margin-top: 80px;
+            font-family: $displayFont;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            span{
+                color: grey;
+            }
+        }
+        h6{
+            font-size: .9rem;
+            font-weight: 500;
+            color: $titleColor;
+            line-height: 1.7rem;
+        }
+        .heavy{
+            font-weight: 600;
+        }
+        p{
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: $black;
+            strong{
+                color: $black;
+                text-tranform: capitalize; 
+                font-weight: 600;
+            }
+            a{
+                color: $paragraphColor;
+                text-decoration: none;
+                font-weight: 500;
+            }
+            &:hover{
+                color: $red;
+                font-weight: 500;
+            }
+        }
+    }
 }
