@@ -81,7 +81,6 @@ var x = document.getElementById('menu');
 console.log(x);
 
 export const globalState = {
-	x,
 	count: 0,
 	companyInfo,
 	specialMenuData,
@@ -89,5 +88,6 @@ export const globalState = {
 	reviewsData,
 	reviewStatus: {
 		currentReview: 0
-	}
+	},
+	x
 };

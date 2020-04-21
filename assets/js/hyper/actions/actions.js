@@ -1,34 +1,27 @@
-export const actions = {
-	reviewRightClick,
-	intro,
-	showMenu,
-	openNav
+var reviewLeftClick = function(state, actions) {
+	return {
+		reviewStatus: {
+			currentReview: state.reviewStatus.currentReview - 1
+		}
+	};
 };
-
-// const reviewRightClick = function(state, actions) {
-// 	return {
-// 		reviewSatus: {
-// 			currentReview: state.reviewStatus.currentReview++
-// 		}
-// 	};
-// };
-function reviewRightClick(state, actions) {
+var reviewRightClick = function(state, actions) {
 	return {
 		reviewStatus: {
 			currentReview: state.reviewStatus.currentReview + 1
 		}
 	};
-}
-function openNav(state, actions) {
+};
+var openNav = function(state, actions) {
 	if (state.x.className == 'menu') {
-		state.x.className = 'active-menu';
+		state.x.className = 'menu-active';
 	} else {
 		state.x.className = 'menu';
 	}
-}
-function showMenu() {}
+};
 
-function intro(state, actions) {
-	console.log('Just ran my first action');
-	return { count: state.count + 1 };
-}
+export const actions = {
+	reviewLeftClick,
+	reviewRightClick,
+	openNav
+};

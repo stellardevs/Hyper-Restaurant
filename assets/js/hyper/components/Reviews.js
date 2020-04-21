@@ -20,15 +20,21 @@ export default function Reviews({ state, actions }) {
 			</div>
 		);
 	};
+	var leftClickBTN = function() {
+		if (state.reviewStatus.currentReview == 0) {
+			console.log('do nothing');
+		} else {
+			actions.reviewLeftClick();
+		}
+	};
 
-	// var rightClickBTN = function() {
-	// 	if (state.reviewStatus.currentReview !== state.reviewsData.length + 1) {
-	// 		console.log('do nothing');
-	// 	}
-	// 	// } else {
-	// 	// 	actions.reviewRightClick;
-	// 	// }
-	// };
+	var rightClickBTN = function() {
+		if (state.reviewStatus.currentReview == state.reviewsData.length - 1) {
+			console.log('do nothing');
+		} else {
+			actions.reviewRightClick();
+		}
+	};
 
 	// console.log(reviewRightClick);
 	// console.log(actions.reviewRightClick().reviewsData[0]);
@@ -45,15 +51,16 @@ export default function Reviews({ state, actions }) {
 						{currentReview()}
 						<div class="arrows">
 							<i
+								onclick={leftClickBTN}
 								class={`fas fa-arrow-left ${
 									state.reviewStatus.currentReview > 0 ? 'ready' : ''
 								}`}
 							></i>
 							<i
-								onclick={actions.reviewRightClick}
+								onclick={rightClickBTN}
 								class={`fas fa-arrow-right ${
 									state.reviewStatus.currentReview ==
-									state.reviewsData.length + 1
+									state.reviewsData.length - 1
 										? ''
 										: 'ready'
 								} `}
