@@ -1,5 +1,5 @@
 var companyInfo = {
-	title: 'LIBRE PIZZA PLAZA',
+	title: 'Libre Pizza Plaza',
 	phone: '613-225-8770',
 	location: 'Ottawa, Ontario'
 };
@@ -37,8 +37,8 @@ const specialMenuData = [
 
 const reviewsData = [
 	{
-		company: 'The Food Network',
-		author: 'Joe Bastachi',
+		company: 'The Foodie Network',
+		author: 'Joe Bucci',
 		authorInfo: 'Winner of Chef Master',
 		highlight: 'Best Pizza in the City!',
 		review:
@@ -77,14 +77,17 @@ const quoteData = [
 			"The trouble with eating Italian food is that five or six days later you're hungry again"
 	}
 ];
+var x = document.getElementById('menu');
+console.log(x);
 
 export const globalState = {
+	x,
 	count: 0,
 	companyInfo,
 	specialMenuData,
 	quoteData,
 	reviewsData,
 	reviewStatus: {
-		currentReview: 2
+		currentReview: 0
 	}
 };

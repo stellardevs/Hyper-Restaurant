@@ -1,13 +1,31 @@
 export const actions = {
-	up,
+	reviewRightClick,
 	intro,
-	showMenu
+	showMenu,
+	openNav
 };
 
-function up(state, actions) {
-	return { count: state.count + 1 };
+// const reviewRightClick = function(state, actions) {
+// 	return {
+// 		reviewSatus: {
+// 			currentReview: state.reviewStatus.currentReview++
+// 		}
+// 	};
+// };
+function reviewRightClick(state, actions) {
+	return {
+		reviewStatus: {
+			currentReview: state.reviewStatus.currentReview + 1
+		}
+	};
 }
-
+function openNav(state, actions) {
+	if (state.x.className == 'menu') {
+		state.x.className = 'active-menu';
+	} else {
+		state.x.className = 'menu';
+	}
+}
 function showMenu() {}
 
 function intro(state, actions) {

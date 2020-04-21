@@ -57,3 +57,15 @@
         }
     }
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #ContactUs{
+        padding: 40px 0;
+        .box {
+            padding: 15px;
+            .left-side{
+            margin-top: 0;
+            }
+        }
+    }
+}

@@ -13,11 +13,11 @@ position: relative;
         padding: 200px 0 80px;
         text-align: right;
     h1{
-        font-family: $displayFont;
-        text-transform: uppercase;
+        font-family: $logoFont;
+        text-transform: capitalize;
         color: white;
         font-weight: 300;
-        font-size: 4rem;
+        font-size: 5.5rem;
     }
   
     h5{
@@ -49,6 +49,25 @@ position: relative;
             margin-bottom: 20px;
             color: white;
 
+        }
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .title{
+        h5{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            line-height: 4.5rem;
+        }
+    }
+    .contact-info {
+        .hours{
+            span{
+                display: none;
+            }
         }
     }
 }

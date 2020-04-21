@@ -22,7 +22,7 @@ export default function OurStory({ state, actions }) {
 							<strong>Tom Huntington</strong>
 						</div>
 						<a href="#" class="reserve-btn">
-							Reserve
+							Reserve a Table
 						</a>
 					</div>
 					<div class="col-md-6">

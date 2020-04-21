@@ -20,6 +20,18 @@ export default function Reviews({ state, actions }) {
 			</div>
 		);
 	};
+
+	// var rightClickBTN = function() {
+	// 	if (state.reviewStatus.currentReview !== state.reviewsData.length + 1) {
+	// 		console.log('do nothing');
+	// 	}
+	// 	// } else {
+	// 	// 	actions.reviewRightClick;
+	// 	// }
+	// };
+
+	// console.log(reviewRightClick);
+	// console.log(actions.reviewRightClick().reviewsData[0]);
 	return (
 		<section id="Reviews">
 			<div class="container">
@@ -38,12 +50,13 @@ export default function Reviews({ state, actions }) {
 								}`}
 							></i>
 							<i
-								class={`fas ${
+								onclick={actions.reviewRightClick}
+								class={`fas fa-arrow-right ${
 									state.reviewStatus.currentReview ==
-									state.reviewsData.length - 1
+									state.reviewsData.length + 1
 										? ''
 										: 'ready'
-								} fa-arrow-right`}
+								} `}
 							></i>
 						</div>
 					</div>

@@ -20,24 +20,13 @@
             padding: 20px;
             height: 380px;
             .box-img{
+                height: 200px;
+                position: relative;
+                margin-bottom: 70px;
                 img{
                   width: 100%;  
                   height: 200px;
                 }
-                
-                height: 200px;
-                // background-image:
-                // url('https://i.imgur.com/f1sMg4h.jpg');
-                // background-position: center;
-                // background-size: cover;
-                position: relative;
-                margin-bottom: 70px;
-                // .box-img:nth-child(2){
-                //     background-image:
-                //     url('https://i.imgur.com/reY52Ax.jpg');
-                //     background-position: center;
-                //     background-size: cover;
-                // }
                     .price-circle{
                     font-family: $displayFont;
                     font-size: 2rem;
@@ -89,5 +78,13 @@
             margin-bottom: 40px;
             // padding: 30px 0;
         }
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    #SpecialMenu{
+        padding: 40px 0;
+        height: 1470px;
     }
 }

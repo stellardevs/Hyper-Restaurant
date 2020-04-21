@@ -21,7 +21,7 @@ export default function ContactUs({ state, actions }) {
 						</p>
 					</div>
 					<div class="col-md-6">
-						<h6>Phone</h6>
+						<h6>Phone:</h6>
 						<div class="title">613-225-8770</div>
 						<h6 class="heavy">Brunch/Lunch Service</h6>
 						<p>
